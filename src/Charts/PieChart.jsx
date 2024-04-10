@@ -27,7 +27,7 @@ const PieChart = ({ data, title }) => {
   };
 
   return (
-    <div>
+    <div className="pie-chart">
       <h2>{title}</h2>
       <Pie
         data={chartData}

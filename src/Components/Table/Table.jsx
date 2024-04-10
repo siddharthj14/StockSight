@@ -1,4 +1,5 @@
 import React from "react";
+import "./Table.css";
 
 const Table = ({ candlesData }) => {
   const formatDate = (dateString) => {
@@ -11,7 +12,7 @@ const Table = ({ candlesData }) => {
 
   return (
     <div>
-      <h2>Candle Data:</h2>
+      <h2>Candle Data</h2>
       <table border={1}>
         <thead>
           <tr>
