@@ -1,7 +1,7 @@
 import { Line } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 
-Chart.register(...registerables); // Register all components
+Chart.register(...registerables);
 
 const LineGraph = ({ data, title }) => {
   const formatDate = (dateString) => {
@@ -16,8 +16,7 @@ const LineGraph = ({ data, title }) => {
     labels: data.map((d) => formatDate(d[1])),
     datasets: [
       {
-        // label: "OHLC Data",
-        data: data.map((d) => d[0]), // Corrected mapping
+        data: data.map((d) => d[0]),
         backgroundColor: ["rgba(255, 99, 132, 1)"],
         borderColor: ["rgba(255, 99, 132, 0.5)"],
         borderWidth: 5,
@@ -33,13 +32,13 @@ const LineGraph = ({ data, title }) => {
         options={{
           scales: {
             y: {
-              type: "linear", // Set scale type explicitly
+              type: "linear",
               beginAtZero: true,
             },
           },
           plugins: {
             legend: {
-              display: false, // Hide the legend
+              display: false,
             },
           },
         }}

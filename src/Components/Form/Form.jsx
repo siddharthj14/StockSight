@@ -34,7 +34,7 @@ const Form = ({
         </div>
       </div>
       <div className="btn-class">
-        <button type="submit">Fetch Data</button>
+        <button type="submit">Get Data</button>
       </div>
     </form>
   );

@@ -1,7 +1,7 @@
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 
-Chart.register(...registerables); // Register all components
+Chart.register(...registerables);
 
 const BarChart = ({ data, title }) => {
   const formatDate = (dateString) => {
@@ -16,7 +16,6 @@ const BarChart = ({ data, title }) => {
     labels: data.map((d) => formatDate(d[1])),
     datasets: [
       {
-        // label: "OHLC Data",
         data: data.map((d) => [d[0]]),
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
@@ -43,13 +42,13 @@ const BarChart = ({ data, title }) => {
         options={{
           scales: {
             y: {
-              type: "linear", // Set scale type explicitly
+              type: "linear",
               beginAtZero: true,
             },
           },
           plugins: {
             legend: {
-              display: false, // Hide the legend
+              display: false,
             },
           },
         }}

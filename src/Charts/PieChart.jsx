@@ -1,7 +1,7 @@
 import { Pie } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 
-Chart.register(...registerables); // Register all components
+Chart.register(...registerables);
 
 const PieChart = ({ data, title }) => {
   const chartData = {
@@ -34,7 +34,7 @@ const PieChart = ({ data, title }) => {
         options={{
           scales: {
             y: {
-              type: "linear", // Set scale type explicitly
+              type: "linear",
               beginAtZero: true,
             },
           },
